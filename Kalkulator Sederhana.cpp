@@ -128,7 +128,12 @@ int main()
             case 2:         //Integral
                 cout<<"\nF(x) = ";
                 for (int i = 0; i < jumlah; i++){       //Output rumus awal integral
-                    cout<<n[i]<<"/"<<p[i] + 1<<"X^"<<p[i]+1;
+                    if(p[i] != -1){                 //Pangkat selain -1
+                        cout<<n[i]<<"/"<<p[i] + 1<<"X^"<<p[i]+1;
+                    }
+                    else{                           //Pangkat -1
+                        cout<<n[i]<<"ln|X|";
+                    }
                     if(jumlah - i != 1){
                         cout<<" + ";
                     }
